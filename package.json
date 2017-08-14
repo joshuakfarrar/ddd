@@ -7,7 +7,9 @@
     "test": "test"
   },
   "dependencies": {
-    "uuid": "^3.0.1"
+    "cqrs": "file:/Users/jfarrar/g/sent1nel/cqrs",
+    "lodash": "^4.17.4",
+    "uuid": "^3.1.0"
   },
   "devDependencies": {},
   "scripts": {

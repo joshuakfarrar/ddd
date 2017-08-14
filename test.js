@@ -1,16 +1,20 @@
-var Track = require('./index').Track;
-var Artist = require('./index').Artist;
+var Journal = require('./index').Journal;
 
-var artist = new Artist();
-artist.create();
-artist.setName('Abba');
+var entry = new Journal.Entry();
+entry.create();
+entry.setTitle('hello world.');
+entry.setBody('we\'re doing it live #maga');
+entry.setTitle('just hello');
 
-var track = new Track();
-track.create();
-track.setName('Dancing Queen');
-track.setName('Exogenesis');
-track.setArtist(artist);
-artist.setName('Muse');
+var author = new Journal.Author();
+author.create();
+author.setName('Joshua K. Farrar');
 
-console.log(track); // boom! event-sourcing!
-console.log(artist);
+entry.addAuthor(author);
+entry.addAuthor(author);
+entry.removeAuthor(author);
+entry.addAuthor(author);
+entry.addAuthor(author);
+entry.addAuthor(author);
+entry.addAuthor(author);
+console.log(entry._domainModel);
